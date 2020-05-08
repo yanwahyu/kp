@@ -1,5 +1,5 @@
-@font-face {font-family:'jsf';font-weight:600;src:url('/media/css/font/jsf.woff') format('woff');}
-@font-face {font-family:'df';font-weight:600;src:url('/media/css/font/df.woff') format('woff');}
+@font-face {font-family:'jsf';font-weight:600;src:url('/aset/css/font/jsf.woff') format('woff');}
+@font-face {font-family:'df';font-weight:600;src:url('/aset/css/font/df.woff') format('woff');}
 *{box-sizing:border-box;}
 html{font-size:1.25em;}
 body{background:#1a2530;color:#e2e1e1;font-family:'df';line-height:1.4;margin:0;}
@@ -115,7 +115,7 @@ td:hover .ti{position:relative;left:0}
 .rec-on{background:#ff0000;color:#fff;}
 .rec-items div:hover{background:#350303;}
 
-@media only screen and (max-width:900px){
+@aset only screen and (max-width:900px){
    .mr1{margin-top:1rem;}
    .mm{display: block;}
    .ml1{ display: grid;grid-gap: 10px;grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));}
