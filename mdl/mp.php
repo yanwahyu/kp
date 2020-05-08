@@ -1,7 +1,7 @@
 <?php 
 // class post
 
-class mp {private $db;private $publish = 'stat LIKE "publish"';public function __construct(){$this->db=new DB;}
+class mp {private $db;private $publish = 'stat LIKE 1';public function __construct(){$this->db=new DB;}
 
 public function as($slug){ //article_single
    $this->db->query('SELECT p.tags,p.nama,p.des,p.auth,p.date,p.cont,p.cats,p.slug FROM'.XP.'WHERE slug=:slug AND '.$this->publish);
@@ -14,8 +14,9 @@ public function ac(){ // article count
    return $this->db->efc();
 }
 
-public function aa($offset){ // article all
-   $this->db->query('SELECT * FROM'.XP.'WHERE '.$this->publish.' ORDER BY date DESC LIMIT '.PL.' OFFSET '.$offset);
+public function aa($os){ // article all
+   
+   $this->db->query('SELECT * FROM'.XP.'WHERE '.$this->publish.' ORDER BY date DESC LIMIT '.PL.' OFFSET '.$os);
    return $this->db->efa();
 }
 
