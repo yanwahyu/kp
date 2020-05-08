@@ -22,9 +22,8 @@ require 'ctr/i.php';
 $c=new i; // controller
 $m='b0t'; // method
 $p=[]; // parameter
-// jika ada url
 
-print_r($u);
+
 // jika ada url[0] atau slug awal
 if(isset($u[0])){ 
 // jika method ada pada class i maka meth adalah url[0]
