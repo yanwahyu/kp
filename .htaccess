@@ -1,0 +1,7 @@
+Options -Multiviews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteCond %{REQUEST_URI} !^/robots\.txt$ [NC]
+RewriteCond %{REQUEST_URI} !^/favicon\.ico$ [NC]
+RewriteRule ^(.*)$ index.php?u=$1 [L]
