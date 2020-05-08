@@ -1,5 +1,5 @@
-@font-face {font-family:'jsf';font-weight:600;src:url('/media/css/font/jsf.woff') format('woff');}
-@font-face {font-family:'df';font-weight:400;src:url('/media/css/font/df.woff') format('woff');}
+@font-face {font-family:'jsf';font-weight:600;src:url('/aset/css/font/jsf.woff') format('woff');}
+@font-face {font-family:'df';font-weight:400;src:url('/aset/css/font/df.woff') format('woff');}
 *{box-sizing:border-box;}
 html{font-size:1.25em;}
 body{font-family:'df';color:#444;line-height:1.4;margin:0;}
