@@ -29,7 +29,6 @@ switch($a){
    break;
    // ARTICLE PAGE
    case !empty($d['as']=$this->m('mp')->as($a)):
-   $d['as']['tags']=explode(',',$d['as']['tags']);
    function cc($d){ // convert category
    return str_replace('-',' ',ucwords($d));
    }
