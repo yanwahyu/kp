@@ -31,8 +31,6 @@ public function acbc($name){ // article count by cats
    return $this->db->efc();
 }
 
-
-
 public function ap(){ // article popular
    $this->db->query('select id,name,slug,cont from'.XP.'WHERE FIND_IN_SET(`id`, (select CONCAT(",", popular, ",") from'.XS.'where id = 1))');
    return $this->db->efa();
