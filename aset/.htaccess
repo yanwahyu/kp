@@ -1,0 +1,5 @@
+RewriteEngine off
+Options -Indexes
+ErrorDocument 404 /404
+ErrorDocument 403 /404
+ErrorDocument 500 /404
