@@ -1,5 +1,4 @@
 <section>
-<div class="wt"><h1 class="wtt"><?= $d['nama'];?></h1></div>
 <?php $i=1;foreach ($d['p'] as $p){?>
 <article>
 <h2 class="t"><a href="/<?=$p['slug']?>" target="_self">

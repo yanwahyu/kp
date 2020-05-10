@@ -1,4 +1,1 @@
-<article class="colsl coll pt15">
-<h1 class="t"><?=$d['nama']?></h1>
-<div class="ac"><?=$d['cont']?></div>
-</article>
+<?='<ul class="bc"><li><a href="'.L.'">Home</a></li><li><a href="'.L.$d['l'].'">'.ucwords($d['ln']).'</a></li></ul><article class="colsl coll pt15"><h1 class="t">'.$d['nama'].'</h1><div class="ac">'.$d['cont'].'</div></article>'?>

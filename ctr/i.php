@@ -2,54 +2,34 @@
 // untuk url[0] 'domain/url[0]'
 // $a untuk membuat default variable jika url[1] tidak ada
 // $b untuk membuat default variable jika url[2] tidak ada
-function b0t($a='g0',$b=1){
-switch($a){
-   // HOMEPAGE
-   case $a=='g0'||$a=='page': 
-   if($a=='page' && $b==1){header('Location: /');exit;}
-   $d['pg']=$b; // page
-   $d['ni']=$d['pg']!=1?'0':''; // noindex
-   $d['os']=($d['pg'] - 1) * PL; //offset
-   $d['np']=$b + 1; // nextpage
+// $c untuk membuat default variable jika url[3] tidak ada
+function b0t($a='g0',$b=1,$c=1){
+   $x=$a=='g0'||$a=='page'||!empty($d['ps']=$this->m('mp')->as($a))?$b:$c;
+   $d['cd']=$this->m('mp')->cd(); // cat default
+   $d['pg']=$x; // page
+   $d['ni']=$x==1?1:0; // noindex
+   $d['os']=($x-1)*PL; //offset
+   $d['np']=$x+1; // nextpage
    $d['pl']='/page/'; //pagelink
-   // JIKA di HOMEPAGE
-   if($b==1){ 
-   $d['n']='Cari di '.T.' Aja'; // title halaman utama
-   }else{ 
-   $d['n']='Halaman '.$b.' '.T; // title halaman pages
-   }
-   $d['d']='Situs Anak Muda Indonesia'; // deskripsi
-   $d['ta']=$this->m('mp')->ac(); // total article
-   $d['tp']=ceil($d['ta']/PL); // total pages
-   $d['p']=$this->m('mp')->aa($d['os']); // post
-   $this->v('h',$d);
-   $this->v('i',$d);
-   $this->v('p',$d);
-   $this->v('f',$d);
+   if($a=='page'&&$b==1){header('Location: /');exit;}
+   switch($a){
+   case $a=='g0'||$a=='page':  // HOMEPAGE ----------
+   require 'mi.php';
    break;
-   // ARTICLE PAGE
-   case !empty($d['as']=$this->m('mp')->as($a)):
-   function cc($d){ // convert category
-   return str_replace('-',' ',ucwords($d));
-   }
-   $d['as']['catNama']=cc($d['as']['cats']);
-   $d['n']=$d['as']['nama'].'- '.T;
-   $d['d']=$d['as']['des'];
-   $this->v('h',$d);
-   $this->v('a',$d);
-   $this->v('f',$d);
+   case !empty($d['ps']): // ARTICLE PAGE ----------
+   require 'ma.php';
    break;
-   // 404 PAGE
-   case $a=='404':
+   case in_array($a,$d['cd']['s']):
+   require 'mc.php';
+   break;
+   default: // 404 PAGE
    $this->v('404');
-   break;
-   default:$this->v('404');
 }
 }
-
-function saya($a='g0',$b=1){
-
-   
+function category($a='g0',$b=1,$c=1){
+   require 'c.php';
 }
-
+function about($a='g0'){
+   require 'ab.php';
+}
 }

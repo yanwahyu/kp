@@ -8,4 +8,5 @@ function exe(){$this->st->execute();}
 function ef(){$this->st->execute();return$this->st->fetch(PDO::FETCH_ASSOC);}
 function efa(){$this->st->execute();return$this->st->fetchAll(PDO::FETCH_ASSOC);}
 function efc(){$this->st->execute();return$this->st->fetchColumn();}
+function nr(){$this->st->nextRowset();}
 function rc(){return$this->st->rowCount();}}

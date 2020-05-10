@@ -1,1 +1,1 @@
-</div></main><footer><div class="xw"><nav class="fm"><div class="atl"><a href="/about/contact">Kontak</a> | <a href="/about/">Tentang</a> | <a href="/about/privacy">Kebijakan</a></div><div class="atr">© 2019 Kowpi.com</div></nav></div></footer>
+</div></main><footer><div class="xw"><nav class="fm"><div class="atl"><a href="/about/contact">Kontak</a> | <a href="/about/">Tentang</a> | <a href="/about/privacy">Kebijakan</a></div><div class="atr">© 2020 <a href="<?=L?>"><?=T?><span class="hlc">.com</span></a></div></nav></div></footer>

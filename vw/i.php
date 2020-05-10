@@ -1,7 +1,8 @@
 <section>
-<?php $i=1;foreach ($d['p'] as $p){?>
+<h1><div class="wt"><h1 class="wtt">Artikel <?= $d['n'];?></h1></div></h1>
+<?php $i=1;foreach ($d['p']['b'] as $p){?>
 <article class="ac">
-<h2 class="t"><a href="/<?=$p['slug']?>">
+<h2 class="t"><a href="<?=L?><?=$p['slug']?>">
 <?=$p['nama']?>
 </a></h2>
 <div class="i">
@@ -11,7 +12,7 @@
 <?php $cont=explode("<!--more-->", $p['cont']);
 echo $cont[0];?>
 </div>
-<div class="rm"><a href="/<?=$p['slug']?>" target="_self">Lanjutkan Membaca...</a></div>
+<div class="rm"><a href="/<?=$p['slug']?>">Lanjutkan Membaca...</a></div>
 </article>
 <?php }?>
 </section>
